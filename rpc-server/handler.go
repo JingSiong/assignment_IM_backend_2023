@@ -13,9 +13,9 @@ import (
 type IMServiceImpl struct{}
 
 func (s *IMServiceImpl) Send(ctx context.Context, req *rpc.SendRequest) (*rpc.SendResponse, error) {
-	if err := validateSendRequest(req); err != nil {
-		return nil, err
-	}
+	//if err := validateSendRequest(req); err != nil {
+	//return nil, err
+	//}
 
 	timestamp := time.Now().Unix()
 	message := &Message{
